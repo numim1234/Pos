@@ -1,0 +1,77 @@
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto; /* เพื่อให้คอนเทนเนอร์อยู่กลางหน้า */
+}
+
+body{ 
+    background-color: rgb(255, 255, 255) !important;
+    padding: 20px;
+}
+.icon-link > .bi {
+    width: .75em;
+    height: .75em;
+}
+
+/* Custom translucent site header */
+.site-header {
+    background-color: rgba(114, 6, 172, 0.78);
+    -webkit-backdrop-filter: saturate(180%) blur(20px); /* Webkit for Safari */
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #581b1b;
+    transition: color .15s ease-in-out;
+}
+
+.site-header a:hover {
+    color: #9a0000;
+    text-decoration: none;
+}
+
+/* Dummy devices (replace them with your own or something else entirely!) */
+.product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #ac2424;
+    border-radius: 21px;
+    transform: rotate(30deg);
+    z-index: 1; /* เพิ่ม z-index เพื่อให้มันอยู่บนสุด */
+}
+
+.product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(109, 160, 38, 0.1);
+    border-radius: 5px;
+}
+
+.product-device-2 {
+    position: absolute;
+    top: -25%;
+    left: 5%;
+    right: auto;
+    bottom: 0;
+    width: 300px; /* เพิ่มขนาดกำหนด */
+    height: 540px; /* เพิ่มขนาดกำหนด */
+    background-color: #ed0000;
+}
+
+/* Extra utilities */
+.flex-equal > * {
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .flex-md-equal > * {
+        flex: 1;
+    }
+}
